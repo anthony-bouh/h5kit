@@ -1,0 +1,49 @@
+[build-system]
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "h5kit"
+version = "0.1.2"
+description = "Convenience wrappers and utilities that extend h5py for HDF5 workflows."
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "h5py>=3.8",
+    "numpy>=1.23",
+]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Science/Research",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Scientific/Engineering",
+]
+
+[project.optional-dependencies]
+data = [
+    "pandas>=1.5",
+]
+dev = [
+    "build>=1.0",
+    "pytest>=7.4",
+    "twine>=4.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/anthony-bouh/h5kit"
+Repository = "https://github.com/anthony-bouh/h5kit"
+Issues = "https://github.com/anthony-bouh/h5kit/issues"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["h5kit*"]
+exclude = ["h5py*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
