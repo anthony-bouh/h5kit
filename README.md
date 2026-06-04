@@ -47,17 +47,6 @@ Build a source distribution and wheel:
 python -m build
 ```
 
-## Publish To GitHub
+## License
 
-Create a repository named `h5kit` under `anthony-bouh`, then run:
-
-```bash
-git init
-git add .
-git commit -m "Prepare h5kit package"
-git branch -M main
-git remote add origin https://github.com/anthony-bouh/h5kit.git
-git push -u origin main
-```
-
-Before a public release, choose and add a license, then update the package version in both `pyproject.toml` and `src/h5kit/__init__.py`.
+This project is licensed under the MIT License. See `LICENSE` for details.
