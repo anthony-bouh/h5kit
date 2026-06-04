@@ -6,16 +6,22 @@ The package is intentionally imported as `h5kit`, not `h5py`, so it can depend o
 
 ## Install
 
-For local development:
+Install directly from GitHub:
 
 ```bash
-python -m pip install -e ".[dev,data]"
+python -m pip install "h5kit @ git+https://github.com/anthony-bouh/h5kit.git"
 ```
 
-For a minimal install without DataFrame/CSV/Excel helpers:
+By default, `pip` installs the latest commit from the repository's default branch. For a stable, reproducible install, pin a version tag:
 
 ```bash
-python -m pip install -e .
+python -m pip install "h5kit @ git+https://github.com/anthony-bouh/h5kit.git@v0.1.2"
+```
+
+With optional DataFrame/CSV/Excel helpers:
+
+```bash
+python -m pip install "h5kit[data] @ git+https://github.com/anthony-bouh/h5kit.git@v0.1.2"
 ```
 
 ## Quick Start
